@@ -44,6 +44,7 @@
     direnv
     nil
     nixfmt-rfc-style
+    bacon
   ];
 
   programs.git = {

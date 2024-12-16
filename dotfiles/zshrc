@@ -24,6 +24,7 @@ alias gup='git pull --rebase --prune --tags'
 alias gst='git status'
 alias gb='git branch'
 alias gup='git pull --rebase'
+alias gcb='git checkout -b'
 
 # MacOS
 alias pbc='pbcopy'

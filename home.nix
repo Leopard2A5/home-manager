@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  isMacOS = builtins.currentSystem == "x86_64-darwin" || builtins.currentSystem == "aarch64-darwin";
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -69,6 +72,9 @@
 
     ".zshrc".source = dotfiles/zshrc;
     ".config/starship.toml".source = dotfiles/starship.toml;
+    ".config/Code/User/keybindings.json".source = (
+      if isMacOS then dotfiles/vscode_keys_mac.json else dotfiles/vscode_keys_pc.json
+    );
   };
 
   # Home Manager can also manage your environment variables through

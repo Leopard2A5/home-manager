@@ -25,6 +25,7 @@ alias gst='git status'
 alias gb='git branch'
 alias gup='git pull --rebase'
 alias gcb='git checkout -b'
+alias gd='git diff'
 
 # MacOS
 alias pbc='pbcopy'

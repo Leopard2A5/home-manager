@@ -1,0 +1,32 @@
+# managed by home-manager
+
+# load home-manager env vars
+source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+
+# launch starship
+eval "$(starship init zsh)"
+
+# enable direnv
+eval "$(direnv hook zsh)"
+
+# enable fzf
+source <(fzf --zsh)
+
+# ALIASES
+# shell
+alias ls='eza'
+alias ll='ls -lh'
+alias la='ll -alh'
+
+# git
+alias gl="git log --all --decorate --graph --pretty='format:%Cgreen%h%Creset  %<(15)%ar %<(20)%an %Cred%d%Creset%s'"
+alias gup='git pull --rebase --prune --tags'
+
+# MacOS
+alias pbc='pbcopy'
+alias pbp='pbpaste'
+
+# k8s
+alias kt='kubetail'
+alias kctl='kubectl'
+alias kgp='kubectl get pods'

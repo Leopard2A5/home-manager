@@ -43,6 +43,8 @@ in
     fzf
     bat
     eza
+    fd
+    ripgrep
     vscode
     direnv
     nil

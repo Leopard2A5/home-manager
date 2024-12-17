@@ -45,11 +45,18 @@ in
     eza
     fd
     ripgrep
+    jq
+    yq
     vscode
     direnv
     nil
     nixfmt-rfc-style
+    rustup
     bacon
+    cargo-deny
+    cargo-expand
+    cargo-outdated
+    cargo-udeps
   ];
 
   programs.git = {

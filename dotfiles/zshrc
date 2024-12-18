@@ -28,6 +28,8 @@ alias gcb='git checkout -b'
 alias gd='git diff'
 alias gco='git checkout'
 alias gcd='git checkout develop'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
 
 # MacOS
 alias pbc='pbcopy'

@@ -38,5 +38,10 @@
     {
         "key": "ctrl+shift+r",
         "command": "workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
     }
 ]

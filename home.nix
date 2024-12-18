@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 let
+  unstable = import <nixpkgs-unstable> { };
   isMacOS = builtins.currentSystem == "x86_64-darwin" || builtins.currentSystem == "aarch64-darwin";
 in
 {
@@ -47,7 +48,7 @@ in
     ripgrep
     jq
     yq
-    vscode
+    unstable.vscode
     direnv
     nil
     nixfmt-rfc-style

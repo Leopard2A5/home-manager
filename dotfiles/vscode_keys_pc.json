@@ -43,5 +43,15 @@
         "key": "ctrl+shift+c",
         "command": "-workbench.action.terminal.openNativeConsole",
         "when": "!terminalFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
     }
 ]

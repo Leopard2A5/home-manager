@@ -48,7 +48,7 @@ in
     ripgrep
     jq
     yq
-    unstable.vscode
+    # unstable.vscode
     direnv
     nil
     nixfmt-rfc-style
@@ -64,6 +64,24 @@ in
     enable = true;
     userName = "René Perschon";
     userEmail = "rperschon85@gmail.com";
+  };
+
+  programs.vscode = {
+    enable = true;
+    enableUpdateCheck = true;
+    enableExtensionUpdateCheck = true;
+    extensions = with pkgs.vscode-extensions; [
+      davidanson.vscode-markdownlint
+      eamodio.gitlens
+      github.vscode-github-actions
+      hashicorp.terraform
+      jnoortheen.nix-ide
+      mkhl.direnv
+      redhat.vscode-yaml
+      rust-lang.rust-analyzer
+      tamasfe.even-better-toml
+      zxh404.vscode-proto3
+    ];
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -85,6 +103,7 @@ in
     ".config/Code/User/keybindings.json".source = (
       if isMacOS then dotfiles/vscode_keys_mac.json else dotfiles/vscode_keys_pc.json
     );
+    ".config/Code/User/settings.json".source = dotfiles/vscode_settings.json;
   };
 
   # Home Manager can also manage your environment variables through

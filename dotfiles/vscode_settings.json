@@ -1,0 +1,25 @@
+// Managed by home-manager
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.external.osxExec": "iTerm.app",
+    "[rust]": {
+        "editor.formatOnSave": true,
+    },
+    "git.openRepositoryInParentFolders": "always",
+    "workbench.startupEditor": "none",
+    "redhat.telemetry.enabled": false,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "rust-analyzer.check.features": "all",
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nil",
+    "nix.serverSettings": {
+        "nil": {
+            "formatting": { "command": ["nixfmt"] },
+        }
+    },
+    "[nix]": {
+        "editor.formatOnSave": true,
+    },
+}
